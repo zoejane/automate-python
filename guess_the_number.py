@@ -2,8 +2,11 @@
 import random
 print('Hello. What is your name?')
 name = input()
+
 secretNumber = random.randint(1,20)
 print('Well, ' + name + ', I am thinking of a number between 1 and 20.')
+
+print('DEBUG: Secret number is '+str(secretNumber)) #DEBUG
 
 # Ask the player to guess 6 times.
 for guessesTaken in range(1,7):
