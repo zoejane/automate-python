@@ -48,3 +48,23 @@ print(mo.group())
 haRegex = re.compile(r'HaHaHa')
 mo=haRegex.search('He said "HaHaHa"')
 print(mo.group())
+
+phoneRegex=re.compile(r'((\d\d\d-)?\d\d\d-\d\d\d\d(,)?){3}')
+mo=phoneRegex.search('My numbers are 415-5555-1234,555-4242,212-555-0000')
+print(mo.group())
+
+
+haRegex=re.compile(r'(Ha){3,5}')
+mo=haRegex.search('He said "HaHaHa"')
+print(mo.group())
+mo=haRegex.search('He said "HaHaHaHa"')
+print(mo.group())
+mo=haRegex.search('He said "HaHaHaHaHa"')
+print(mo.group())
+
+digitRegex=re.compile(r'(\d){3,5}')
+mo=digitRegex.search('1234567890')
+print(mo.group())
+digitRegex=re.compile(r'(\d){3,5}?')
+mo=digitRegex.search('1234567890')
+print(mo.group())
