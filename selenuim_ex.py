@@ -9,10 +9,17 @@ elem.click()
 #elems=browser.find_elements_by_css_selector('p')
 #print(len(elems))
 
-
+# handle ElementNotVisibleException:
+# Message: Element is not currently visible and so may not be interacted with
 elem=browser.find_element_by_css_selector('.fa-align-right')
 elem.click()
 
 searchElem = browser.find_element_by_css_selector('.search-field')
 searchElem.send_keys('zophie')
 searchElem.submit()
+
+#browser.back()
+#browser.forward()
+#browser.refresh()
+#broweser.quit()
+
